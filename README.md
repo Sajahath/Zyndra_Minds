@@ -1,1 +1,0 @@
-# Zyndra_Minds
