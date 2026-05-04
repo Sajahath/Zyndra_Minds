@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Become a Tutor — Zyndra Minds</title>
+  <meta name="description" content="Apply to become a verified tutor on Zyndra Minds. Reach thousands of students across Sri Lanka." />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234F46E5'/><text y='.9em' font-size='70' x='10'>🧠</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════════ -->
+<nav class="navbar">
+  <a href="index.html" class="nav-brand">
+    <div class="nav-logo">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
+      </svg>
+    </div>
+    <span class="nav-brand-name">Zyndra Minds</span>
+  </a>
+  <div class="nav-actions">
+    <span class="nav-phone" id="nav-phone"></span>
+    <button class="nav-logout" id="logout-btn">Sign Out</button>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════
+     HERO
+════════════════════════════════════════════ -->
+<div class="page-wrapper">
+  <section class="apply-hero">
+    <div class="container">
+      <div style="display:inline-block;padding:5px 18px;background:rgba(255,255,255,.15);border-radius:9999px;color:rgba(255,255,255,.9);font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border:1px solid rgba(255,255,255,.2);margin-bottom:16px">
+        🌟 Join Our Expert Team
+      </div>
+      <h1>Become a Zyndra Tutor</h1>
+      <p>Share your knowledge. Reach students across Sri Lanka. Earn from your expertise.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       APPLY SECTION
+  ════════════════════════════════════════ -->
+  <section class="apply-section">
+    <div class="container">
+      <div class="apply-layout">
+
+        <!-- FORM CARD -->
+        <div class="apply-form-card">
+          <h2 class="apply-form-title">Tutor Application</h2>
+          <p class="apply-form-sub">Fill in the form below. Our team will review and get back to you within 24–48 hours.</p>
+
+          <!-- APPLICATION FORM -->
+          <form id="apply-form" novalidate>
+
+            <!-- Name + Subject -->
+            <div class="form-row">
+              <div class="form-group">
+                <div class="input-wrap">
+                  <label class="input-label" for="tutor-name">Full Name *</label>
+                  <input
+                    type="text"
+                    id="tutor-name"
+                    class="input-field"
+                    placeholder="e.g. Priya Nanayakkara"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-wrap">
+                  <label class="input-label" for="tutor-subject">Subject *</label>
+                  <input
+                    type="text"
+                    id="tutor-subject"
+                    class="input-field"
+                    placeholder="e.g. Mathematics"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Grade + Email -->
+            <div class="form-row">
+              <div class="form-group">
+                <div class="input-wrap">
+                  <label class="input-label" for="tutor-grade">Class / Grade *</label>
+                  <input
+                    type="text"
+                    id="tutor-grade"
+                    class="input-field"
+                    placeholder="e.g. Grade 9–11 (OL)"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-wrap">
+                  <label class="input-label" for="tutor-email">Email Address *</label>
+                  <input
+                    type="email"
+                    id="tutor-email"
+                    class="input-field"
+                    placeholder="you@example.com"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="form-group">
+              <div class="input-wrap">
+                <label class="input-label" for="tutor-phone">Phone Number *</label>
+                <div class="phone-input-wrap">
+                  <div class="phone-flag">🇱🇰 +94</div>
+                  <input
+                    type="tel"
+                    id="tutor-phone"
+                    placeholder="7X XXX XXXX"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <div class="form-group">
+              <div class="input-wrap">
+                <label class="input-label" for="tutor-desc">About You / Teaching Style</label>
+                <textarea
+                  id="tutor-desc"
+                  class="input-field"
+                  placeholder="Tell students about your teaching approach, qualifications, and what makes your classes unique…"
+                ></textarea>
+              </div>
+            </div>
+
+            <!-- Image Upload -->
+            <div class="form-group">
+              <div class="input-wrap">
+                <label class="input-label">Profile Photo / Logo</label>
+                <div class="upload-area" id="upload-area">
+                  <img class="upload-preview" id="image-preview" alt="Preview" />
+                  <div class="upload-icon">📷</div>
+                  <div class="upload-text">
+                    <strong>Click to upload</strong> or drag & drop<br>
+                    <span>PNG, JPG up to 5MB</span>
+                  </div>
+                  <input type="file" id="tutor-image" accept="image/*" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" id="submit-btn" class="btn btn-primary btn-full btn-lg">
+              Submit Application 🚀
+            </button>
+
+          </form>
+
+          <!-- SUCCESS MESSAGE -->
+          <div class="success-message" id="success-message">
+            <div class="success-icon">✅</div>
+            <h3>Application Sent!</h3>
+            <p>Thank you for applying to Zyndra Minds. Our team will review your application and contact you within 24–48 hours.</p>
+            <p style="font-size:.82rem;color:var(--gray-500);margin-bottom:28px">For faster response, you can reach our admin directly on WhatsApp.</p>
+            <button id="contact-admin-btn" class="btn btn-whatsapp btn-full" style="margin-bottom:16px">
+              <svg style="width:20px;height:20px;fill:white;flex-shrink:0" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.112.549 4.1 1.507 5.83L0 24l6.335-1.48A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.848 0-3.579-.504-5.065-1.381l-.363-.215-3.762.878.893-3.673-.236-.376A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+              </svg>
+              Contact Admin on WhatsApp
+            </button>
+            <a href="index.html" class="btn btn-outline btn-full">← Back to Home</a>
+          </div>
+
+        </div><!-- /apply-form-card -->
+
+        <!-- SIDEBAR -->
+        <div class="apply-sidebar">
+
+          <!-- Benefits -->
+          <div class="sidebar-card">
+            <div class="sidebar-card-title">🌟 Why Teach with Us?</div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon" style="background:#EEF2FF">💰</div>
+              <div class="benefit-text">
+                <h4>Earn on Your Terms</h4>
+                <p>Set your own schedule and earn directly. Full control over your teaching hours.</p>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon" style="background:#ECFDF5">📱</div>
+              <div class="benefit-text">
+                <h4>Reach 10K+ Students</h4>
+                <p>Access our growing student base across Sri Lanka — all subjects and grades.</p>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon" style="background:#FEF3C7">✅</div>
+              <div class="benefit-text">
+                <h4>Verified Badge</h4>
+                <p>Get a Verified Tutor badge that builds trust and attracts more bookings.</p>
+              </div>
+            </div>
+
+            <div class="benefit-item">
+              <div class="benefit-icon" style="background:#FEE2E2">🛡️</div>
+              <div class="benefit-text">
+                <h4>Safe & Secure</h4>
+                <p>Payments are handled securely. Admin-verified booking system protects everyone.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats card -->
+          <div class="sidebar-card" style="background:var(--gradient);border:none">
+            <div style="font-family:var(--font-display);font-size:1rem;font-weight:700;color:white;margin-bottom:16px">
+              📊 Platform Stats
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+              <div style="text-align:center">
+                <div style="font-family:var(--font-display);font-size:1.8rem;font-weight:700;color:white">500+</div>
+                <div style="font-size:.78rem;color:rgba(255,255,255,.75)">Active Tutors</div>
+              </div>
+              <div style="text-align:center">
+                <div style="font-family:var(--font-display);font-size:1.8rem;font-weight:700;color:white">10K+</div>
+                <div style="font-size:.78rem;color:rgba(255,255,255,.75)">Students</div>
+              </div>
+              <div style="text-align:center">
+                <div style="font-family:var(--font-display);font-size:1.8rem;font-weight:700;color:white">4.9★</div>
+                <div style="font-size:.78rem;color:rgba(255,255,255,.75)">Avg Rating</div>
+              </div>
+              <div style="text-align:center">
+                <div style="font-family:var(--font-display);font-size:1.8rem;font-weight:700;color:white">24h</div>
+                <div style="font-size:.78rem;color:rgba(255,255,255,.75)">Review Time</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact card -->
+          <div class="sidebar-card">
+            <div class="sidebar-card-title">💬 Need Help?</div>
+            <p style="font-size:.85rem;color:var(--gray-500);margin-bottom:16px;line-height:1.6">
+              Have questions about teaching with Zyndra Minds? Our admin is happy to help.
+            </p>
+            <a
+              href="https://wa.me/94755131260?text=Hi!%20I%20have%20a%20question%20about%20becoming%20a%20Zyndra%20Minds%20tutor."
+              target="_blank" rel="noopener"
+              class="btn btn-whatsapp btn-full btn-sm"
+            >
+              <svg style="width:16px;height:16px;fill:white;flex-shrink:0" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.112.549 4.1 1.507 5.83L0 24l6.335-1.48A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.848 0-3.579-.504-5.065-1.381l-.363-.215-3.762.878.893-3.673-.236-.376A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+              </svg>
+              Chat with Admin
+            </a>
+          </div>
+
+        </div><!-- /apply-sidebar -->
+
+      </div><!-- /apply-layout -->
+    </div>
+  </section>
+
+</div><!-- /page-wrapper -->
+
+<!-- Toast container -->
+<div class="toast-container"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

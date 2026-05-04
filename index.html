@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zyndra Minds — Find Trusted Tutors Instantly</title>
+  <meta name="description" content="Zyndra Minds connects students with verified tutors across Sri Lanka. Find your perfect tutor today." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234F46E5'/><text y='.9em' font-size='70' x='10'>🧠</text></svg>" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+
+  <!-- Clash Display (local fallback) -->
+  <style>
+    @font-face {
+      font-family: 'Clash Display';
+      src: url('https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap');
+      font-display: swap;
+    }
+  </style>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Index-specific overrides */
+    body { overflow: hidden; }
+    @media (max-width: 900px) { body { overflow: auto; } }
+
+    .login-page { height: 100vh; }
+    @media (max-width: 900px) { .login-page { height: auto; min-height: 100vh; } }
+
+    #phone-step { animation: fadeUp .5s ease; }
+    #role-select { display: none; }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     LOGIN PAGE
+════════════════════════════════════════════ -->
+<div class="login-page">
+
+  <!-- LEFT PANEL — Hero branding -->
+  <div class="login-left">
+    <div class="login-brand">
+      <div class="login-brand-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z" fill="white"/>
+        </svg>
+      </div>
+      <span class="login-brand-name">Zyndra Minds</span>
+    </div>
+
+    <div class="login-hero">
+      <div class="login-hero-tag">🇱🇰 Sri Lanka's #1 Tutor Platform</div>
+      <h1>Find Trusted<br>Tutors Instantly</h1>
+      <p>Connect with Sri Lanka's top-rated tutors across every subject. Learn online, at your pace, with verified experts.</p>
+
+      <div class="login-stats">
+        <div class="login-stat">
+          <div class="login-stat-num">500+</div>
+          <div class="login-stat-label">Verified Tutors</div>
+        </div>
+        <div class="login-divider"></div>
+        <div class="login-stat">
+          <div class="login-stat-num">10K+</div>
+          <div class="login-stat-label">Happy Students</div>
+        </div>
+        <div class="login-divider"></div>
+        <div class="login-stat">
+          <div class="login-stat-num">4.9★</div>
+          <div class="login-stat-label">Avg Rating</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative floating cards -->
+    <div style="position:absolute;bottom:40px;right:40px;z-index:1">
+      <div style="background:rgba(255,255,255,.12);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:14px 18px;color:white;font-size:.82rem;margin-bottom:12px">
+        🎓 <strong>Priya N.</strong> just booked a Math class
+      </div>
+      <div style="background:rgba(255,255,255,.12);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:14px 18px;color:white;font-size:.82rem">
+        ⭐ <strong>5.0 Rating</strong> — "Best tutor I've had!"
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT PANEL — Login form -->
+  <div class="login-right">
+    <div class="login-form-wrap">
+      <div class="login-form-header">
+        <h2>Welcome Back 👋</h2>
+        <p>Enter your phone number to continue</p>
+      </div>
+
+      <!-- STEP 1: Phone entry -->
+      <div id="phone-step">
+        <div class="form-group">
+          <label class="input-label" for="phone-input">Phone Number</label>
+          <div class="phone-input-wrap">
+            <div class="phone-flag">🇱🇰 +94</div>
+            <input
+              type="tel"
+              id="phone-input"
+              placeholder="7X XXX XXXX"
+              maxlength="15"
+              autocomplete="tel"
+            />
+          </div>
+        </div>
+
+        <button id="continue-btn" class="btn btn-primary btn-full btn-lg" style="margin-top:8px">
+          Continue →
+        </button>
+
+        <p style="text-align:center;margin-top:20px;font-size:.8rem;color:var(--gray-500)">
+          By continuing you agree to our
+          <a href="#" style="color:var(--blue)">Terms</a> &
+          <a href="#" style="color:var(--blue)">Privacy Policy</a>
+        </p>
+      </div>
+
+      <!-- STEP 2: Role selection -->
+      <div id="role-select" class="role-select">
+        <button id="learn-btn" class="role-btn learn-btn">
+          <div class="role-icon learn-icon">🎓</div>
+          <div class="role-btn-title">I want to Learn</div>
+          <div class="role-btn-sub">Browse & book classes</div>
+        </button>
+        <button id="teach-btn" class="role-btn teach-btn">
+          <div class="role-icon teach-icon">📝</div>
+          <div class="role-btn-title">I want to Teach</div>
+          <div class="role-btn-sub">Apply as a tutor</div>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     TOAST CONTAINER (injected by JS)
+════════════════════════════════════════════ -->
+<div class="toast-container"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
